@@ -53,6 +53,7 @@ architecture Behavioral of piano is
 
     -- My Components:
 
+
     --  Clock Divider
     component clk_dvd
     port (
@@ -94,7 +95,7 @@ architecture Behavioral of piano is
    signal RST         : std_logic;              
    signal PB          : std_logic_vector(3 downto 0);   -- Pushbuttons after ibufs
    signal digit_l     : std_logic_vector(3 downto 0);   -- 7-seg digit MUX before obuf
-   signal switch      : std_logic_vector(7 downto 0);   -- Toggle switches after ibufs
+   signal switch      : std_logic_vector(7 downto 0);   -- Toggle switches after ibuf
    signal led         : std_logic_vector(7 downto 0);   -- LEDs after ibufs
    signal seg_l       : std_logic_vector(7 downto 0);   -- 7-seg segment select before obuf.
   
@@ -254,6 +255,30 @@ begin
             end if;
 
         end if;
-    end process; 
+        
+--        if (switch(8) = '1') then
+--            process (CLK, RST) begin
+--                if (RST = '1') then
+--                    count <= (others => '0');
+--                elsif (rising_edge(CLK)) then
+--                    if (enable = '1') then
+--                        count <= count+1;
+--                    end if;
+--                end if;
+--            end process;
+--        end if;
+        
+    end process;
+    
+    process (CLK)
+        variable cnt    : integer range 0 to 255;
+    begin
+        if (CLK'EVENT AND CLK = '1') then
+            if (switch(8) = '1') then
+                cnt := cnt +1;
+            end if;
+        end if;
+    end process;
+    
     
 end Behavioral;
