@@ -71,22 +71,22 @@ END PROCESS;
 		
 		wait for 1 us;
 		
-		-- Test note for C3
+		-- Test note for C3 output 0eee
         switch_in <= "10000000"; pb_in <= "0000";
         wait for 2us;
-        -- Test note for E3
+        -- Test note for E3 output 0bda
         switch_in <= "00100000"; pb_in <= "0000";
         wait for 2us;
-        -- Test note for E#3
+        -- Test note for E#3 output 0b30
         switch_in <= "00100000"; pb_in <= "0100";
         wait for 2us;
-        -- Test note for A#4
+        -- Test note for A#4 output 0431
         switch_in <= "00000100"; pb_in <= "1100";
         wait for 2us;
-        -- Test note for Gb3
+        -- Test note for Gb3 output 0a8e
         switch_in <= "00001000"; pb_in <= "0010";
         wait for 2us;
-        -- Test note for E4
+        -- Test note for E4 output 05ed
         switch_in <= "00100000"; pb_in <= "1000";
         wait for 2us;
 		
