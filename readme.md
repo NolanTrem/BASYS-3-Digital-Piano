@@ -2,3 +2,6 @@ Using the Basys 3 board, VHDL code can be written to play a song on a digital pi
 
 https://user-images.githubusercontent.com/34580718/154819298-6015854b-de79-4784-bc39-8200ceed8b2b.mov
 
+Future implementations of this project could include:
+- expanding the lenght of the song played
+- Finding a more intuitive way to denote the note played and its length
