@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/34580718/154819298-6015854b-de79-4784-
 
 
 Future implementations of this project could include:
-- expanding the lenght of the song played
+- expanding the length of the song played
 - Finding a more intuitive way to denote the note played and its length
 - Building a more friendly user housing unit to allow for a sturdier and more interactive display of the board
 - improvement of the tones produced—either through a better speaker, introduction of multiple speakers, etc.
